@@ -1,0 +1,12 @@
+<TextView
+    android:id="@+id/quotes_textview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Testing TestingTesting Testing Testing Testing Testing TestingTesting"
+    android:textStyle="italic"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp"
+    android:gravity="center_horizontal"
+    android:textIsSelectable="true"
+    xmlns:android="http://schemas.android.com/apk/res/android" />
+

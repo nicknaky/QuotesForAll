@@ -1,0 +1,76 @@
+<resources>
+    <string name="app_name">Quotes For All</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+<!-- Menu Items -->
+    <string name="action_full_list">Full List</string>
+    <string name="action_random">Random Quote</string>
+
+
+<!-- Quotes -->
+    <string name="q1">"Don\'t ruin a good today by thinking about a bad yesterday."</string>
+    <string name="q2">"An entire sea of water can\'t sink a ship unless it gets inside the ship. Similarly the negativity of the world can\'t put you down unless you allow it to get inside you."</string>
+    <string name="q3">"You can\'t always change the picture, but you can surely change the frame."</string>
+    <string name="q4">"If you\'re going through hell, keep going. - Winston Churchill"</string>
+    <string name="q5">"The purpose of fear is to raise your awareness, not to stop your progress."</string>
+    <string name="q6">"The tragedy of life is not death, but what we let die inside us while we live."</string>
+    <string name="q7">"The best day is today."</string>
+    <string name="q8">"Discipline is just choosing between what you want now and what you want most."</string>
+    <string name="q9">"It\'s going to be hard, but hard is not impossible."</string>
+    <string name="q10">"A bird sitting on a tree is never afraid of the branch breaking because her trust is not within the branch, but within her wings. Believe in yourself."</string>
+    <string name="q11">"I don\'t have dreams. I have goals. - Harvey Specter"</string>
+    <string name="q12">"Work until your idols become your rivals."</string>
+    <string name="q13">"Great men are not born great, they grow great."</string>
+    <string name="q14">"When life puts you in tough situations, don\'t say \'why me.\' Just say \'try me.\'"</string>
+    <string name="q15">"Life isn\'t about finding yourself. Life is about creating yourself."</string>
+    <string name="q16">"I\'m going to make the rest of my life, the best of my life."</string>
+    <string name="q17">"You can\'t stop the waves, but you can learn to surf. - Jon Kabat-Zinn"</string>
+    <string name="q18">"Life is the art of drawing without an eraser. - John W. Gardner"</string>
+    <string name="q19">"There\'s always room at the top. - Daniel Webster"</string>
+    <string name="q20">"Never give up on a dream because of the time it will take to accomplish it. The time will pass anyways. - Earl Nightingale"</string>
+    <string name="q21">"You never know what is enough, until you know what is more than enough. - William Blake"</string>
+    <string name="q22">"You don\'t have to be better than everybody else, you just have to be better than you were a week ago."</string>
+    <string name="q23">"Maturity begins when you can be right without having to prove the other person wrong."</string>
+    <string name="q24">"You either suffer the pain of discipline or you suffer the pain of regret."</string>
+    <string name="q25">"Words are free, it’s how you use them that might cost you."</string>
+    <string name="q26">"We judge others by their actions, but we judge ourselves by our intentions."</string>
+    <string name="q27">"Some people live more in 20 years than others do in 80. Its not the time that matters, its the person. - The Doctor"</string>
+    <string name="q28">"I always wonder why birds choose to stay in the same place when they can fly anywhere on the earth, then I ask myself the same question. - Harun Yahya"</string>
+    <string name="q29">"Would you believe in what you believe in, if you were the only one who believed it?"</string>
+    <string name="q30">"We stopped checking for monsters under our beds when we realized they were inside us. - Sam Steven"</string>
+    <string name="q31">"Sometimes burning bridges is best. It prevents you from going back to places you should have never visited to begin with."</string>
+    <string name="q32">"May the bridges you burn light your way."</string>
+    <string name="q33">"We can complain because rose bushes have thorns, or rejoice because thorn bushes have roses. - Abraham Lincoln"</string>
+    <string name="q34">"I am the wisest man alive, for I know one thing, and that is that I know nothing. - Oracle of Delphi to Socrates"</string>
+    <string name="q35">"It is not the man who has too little, but the man who craves more, that is poor. - Seneca"</string>
+    <string name="q36">"Its very easy to scare people, remarkably difficult to unscare them."</string>
+    <string name="q37">"Everyone who\'s ever had a shower has had a good idea. It\'s the people who dry off and do something about it that make a difference. - Nolan Bushnell"</string>
+    <string name="q38">"Ideas are a commodity. Execution of them is not. - Michael Dell"</string>
+    <string name="q39">"All men dream: but not equally. Those who dream by night in the dusty recesses of their minds wake in the day to find that it was vanity: but the dreamers of the day are dangerous men, for they may act their dreams with open eyes, to make it possible. - T. E. Lawrence."</string>
+    <string name="q40">"Luck is a concept invented by weak people to explain their failures. - Ron Swanson"</string>
+    <string name="q41">"Often times people who are being brutally honest are more interested in being brutal than being honest."</string>
+    <string name="q42">"However, I continue to try and I continue, indefatigably, to reach out. There\'s no way I can singlehandedly save the world or, perhaps, even make a perceptible difference - but how ashamed I would be to let a day pass without making one more effort. - Isaac Asimov"</string>
+    <string name="q43">"Comparison is the thief of joy."</string>
+    <string name="q44">"Anyone can deal with victory. Only the mighty can bear defeat."</string>
+    <string name="q45">"Don\'t promise when you\'re happy. Don\'t reply when you\'re angry. Don\'t decide when you\'re sad."</string>
+    <string name="q46">"The acid of bitterness eats the container that holds it."</string>
+    <string name="q47">"Life becomes easier when you learn to accept the apology you never got."</string>
+    <string name="q48">"The happiness of your life depends on the quality of your thoughts. - Marcus Aurelius"</string>
+    <string name="q49">"Breathe, it\'s just a bad day. Not a bad life."</string>
+    <string name="q50">"If people are not laughing at your goals, your goals are too small. - Azim Premji"</string>
+    <string name="q51">"You are to yourself what your thoughts are, you are to others what your actions are."</string>
+    <string name="q52">"No matter how bad the day is, it\'s still better than the day you never see."</string>
+    <string name="q53">"If you change nothing, nothing will change."</string>
+    <string name="q54">"Forgive others, not because they deserve forgiveness, but because you deserve peace. - Jonathan Lockwood Huie"</string>
+    <string name="q55">"The sooner you step away from your comfort zone; the sooner you\'ll realize that it really wasn\'t all that comfortable. - Eddie Harris Jr"</string>
+    <string name="q56">"Anger, if not restrained, is frequently more hurtful to us than the injury that provokes it. - Seneca"</string>
+
+
+
+
+
+
+
+
+</resources>
