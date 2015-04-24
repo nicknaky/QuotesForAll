@@ -14,7 +14,7 @@ import java.util.Random;
  */
 public class QuotesWidgetProvider extends AppWidgetProvider {
 
-    Random r = new Random();
+
 
     @Override
     public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
@@ -23,6 +23,7 @@ public class QuotesWidgetProvider extends AppWidgetProvider {
         for (int i=0; i<N; i++){
             int appWidgetId = appWidgetIds[i];
 
+            Random r = new Random();
             String[] mQuotesArray = context.getResources().getStringArray(R.array.Quotes);
             int randomIndex = r.nextInt(mQuotesArray.length);
             String randomQuote = mQuotesArray[randomIndex];
@@ -30,6 +31,7 @@ public class QuotesWidgetProvider extends AppWidgetProvider {
 
             RemoteViews views = new RemoteViews(context.getPackageName(),R.layout.quotes_appwidget);
             views.setTextViewText(R.id.widget_text, randomQuote);
+
 
 
             Intent intent = new Intent(context,QuotesWidgetProvider.class);

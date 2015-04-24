@@ -1,5 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <array name="colors_array">
+        <item>@string/black</item>
+        <item>@string/blue</item>
+        <item>@string/red</item>
+        <item>@string/white</item>
+    </array>
+
+
+    <array name="font_color_labels">
+        <item>@string/pref_font_color_label_black</item>
+        <item>@string/pref_font_color_label_blue</item>
+        <item>@string/pref_font_color_label_green</item>
+        <item>@string/pref_font_color_label_red</item>
+        <item>@string/pref_font_color_label_white</item>
+    </array>
+    <array name="font_color_values">
+        <item>@string/pref_font_color_value_black</item>
+        <item>@string/pref_font_color_value_blue</item>
+        <item>@string/pref_font_color_value_green</item>
+        <item>@string/pref_font_color_value_red</item>
+        <item>@string/pref_font_color_value_white</item>
+    </array>
+
+
+    <array name="font_size_labels">
+        <item>@string/pref_font_size_label_12</item>
+        <item>@string/pref_font_size_label_13</item>
+        <item>@string/pref_font_size_label_14</item>
+        <item>@string/pref_font_size_label_15</item>
+        <item>@string/pref_font_size_label_16</item>
+    </array>
+    <array name="font_size_values">
+        <item>@string/pref_font_size_value_12</item>
+        <item>@string/pref_font_size_value_13</item>
+        <item>@string/pref_font_size_value_14</item>
+        <item>@string/pref_font_size_value_15</item>
+        <item>@string/pref_font_size_value_16</item>
+    </array>
+
+
+    <array name="font_type_labels">
+        <item>@string/pref_font_type_label_thin</item>
+        <item>@string/pref_font_type_label_light</item>
+        <item>@string/pref_font_type_label_regular</item>
+        <item>@string/pref_font_type_label_medium</item>
+        <item>@string/pref_font_type_label_bold</item>
+    </array>
+    <array name="font_type_values">
+        <item>@string/pref_font_type_value_thin</item>
+        <item>@string/pref_font_type_value_light</item>
+        <item>@string/pref_font_type_value_regular</item>
+        <item>@string/pref_font_type_value_medium</item>
+        <item>@string/pref_font_type_value_bold</item>
+    </array>
+
+
     <array name="Quotes">
         <item>@string/q1</item>
         <item>@string/q2</item>
