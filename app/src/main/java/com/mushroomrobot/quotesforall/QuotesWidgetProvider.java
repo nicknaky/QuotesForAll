@@ -14,7 +14,7 @@ import java.util.Random;
  */
 public class QuotesWidgetProvider extends AppWidgetProvider {
 
-
+    Context mContext;
 
     @Override
     public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
@@ -33,13 +33,10 @@ public class QuotesWidgetProvider extends AppWidgetProvider {
             views.setTextViewText(R.id.widget_text, randomQuote);
 
 
-
             Intent intent = new Intent(context,QuotesWidgetProvider.class);
             intent.setAction(appWidgetManager.ACTION_APPWIDGET_UPDATE);
             intent.putExtra(appWidgetManager.EXTRA_APPWIDGET_IDS,appWidgetIds);
-
             PendingIntent pendingIntent = PendingIntent.getBroadcast(context,0,intent,PendingIntent.FLAG_UPDATE_CURRENT);
-
             views.setOnClickPendingIntent(R.id.widget_text, pendingIntent);
 
             appWidgetManager.updateAppWidget(appWidgetId,views);

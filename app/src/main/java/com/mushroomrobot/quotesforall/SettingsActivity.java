@@ -5,6 +5,7 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.app.FragmentManager;
+import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -57,6 +58,7 @@ public class SettingsActivity extends Activity {
         }
 
 
+
         TextView textView = (TextView) findViewById(R.id.color_textview);
         textView.setOnClickListener(mClickListener);
 
@@ -68,7 +70,7 @@ public class SettingsActivity extends Activity {
         @Override
         public void onClick(View v) {
 
-            AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(getApplicationContext());
+            AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(SettingsActivity.this);
 
 
             Random r = new Random();
@@ -76,7 +78,7 @@ public class SettingsActivity extends Activity {
             int randomIndex = r.nextInt(mQuotesArray.length);
             String randomQuote = mQuotesArray[randomIndex];
 
-            RemoteViews views = new RemoteViews(getApplicationContext().getPackageName(),R.layout.quotes_appwidget);
+            RemoteViews views = new RemoteViews(SettingsActivity.this.getPackageName(),R.layout.quotes_appwidget);
             views.setTextViewText(R.id.widget_text, randomQuote);
 
             TextView textView = (TextView) findViewById(R.id.color_textview);
@@ -84,6 +86,13 @@ public class SettingsActivity extends Activity {
 
             Log.v("SELECTED COLOR",selectedColor);
             views.setTextColor(R.id.widget_text,Color.parseColor(selectedColor));
+
+
+            Intent intent = new Intent(SettingsActivity.this,QuotesWidgetProvider.class);
+            intent.setAction(appWidgetManager.ACTION_APPWIDGET_UPDATE);
+            intent.putExtra(appWidgetManager.EXTRA_APPWIDGET_IDS,mAppWidgetId);
+            PendingIntent pendingIntent = PendingIntent.getBroadcast(SettingsActivity.this,0,intent,PendingIntent.FLAG_UPDATE_CURRENT);
+            views.setOnClickPendingIntent(R.id.widget_text, pendingIntent);
 
             appWidgetManager.updateAppWidget(mAppWidgetId, views);
 
