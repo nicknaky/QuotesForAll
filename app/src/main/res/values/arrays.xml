@@ -8,6 +8,23 @@
         <item>@string/white</item>
     </array>
 
+    <array name="sizes_array">
+        <item>@string/size10</item>
+        <item>@string/size11</item>
+        <item>@string/size12</item>
+        <item>@string/size13</item>
+        <item>@string/size14</item>
+        <item>@string/size15</item>
+        <item>@string/size16</item>
+    </array>
+
+    <array name="fonts_array">
+        <item>@string/font_normal</item>
+        <item>@string/font_thin</item>
+        <item>@string/font_light</item>
+        <item>@string/font_condensed</item>
+    </array>
+
 
     <array name="font_color_labels">
         <item>@string/pref_font_color_label_black</item>

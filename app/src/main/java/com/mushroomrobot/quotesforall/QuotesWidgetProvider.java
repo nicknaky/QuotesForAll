@@ -5,6 +5,7 @@ import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProvider;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.widget.RemoteViews;
 
 import java.util.Random;
@@ -13,8 +14,6 @@ import java.util.Random;
  * Created by NLam on 4/23/2015.
  */
 public class QuotesWidgetProvider extends AppWidgetProvider {
-
-    Context mContext;
 
     @Override
     public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
@@ -31,7 +30,7 @@ public class QuotesWidgetProvider extends AppWidgetProvider {
 
             RemoteViews views = new RemoteViews(context.getPackageName(),R.layout.quotes_appwidget);
             views.setTextViewText(R.id.widget_text, randomQuote);
-            views.setTextColor(R.id.widget_text,SettingsActivity.setColor);
+            views.setTextColor(R.id.widget_text, Color.parseColor(SettingsActivity.selectedColor));
 
             Intent intent = new Intent(context,QuotesWidgetProvider.class);
             intent.setAction(appWidgetManager.ACTION_APPWIDGET_UPDATE);

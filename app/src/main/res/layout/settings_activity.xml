@@ -10,7 +10,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Color"
+        android:text="@string/color_title"
         android:textColor="@android:color/holo_blue_dark"
         android:textSize="24sp" />
 
@@ -24,7 +24,7 @@
         android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="6dp"
-        android:text="Red"
+        android:text="@string/default_color"
         android:textSize="18sp" />
 
 
@@ -32,7 +32,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="26dp"
-        android:text="Text Size"
+        android:text="@string/size_title"
         android:textColor="@android:color/holo_blue_dark"
         android:textSize="24sp" />
 
@@ -42,17 +42,18 @@
         android:background="@android:color/holo_blue_dark"></View>
 
     <TextView
+        android:id="@+id/size_textview"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="6dp"
-        android:text="12"
+        android:text="@string/default_size"
         android:textSize="18sp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="26dp"
-        android:text="Font"
+        android:text="@string/font_title"
         android:textColor="@android:color/holo_blue_dark"
         android:textSize="24sp" />
 
@@ -62,10 +63,11 @@
         android:background="@android:color/holo_blue_dark"></View>
 
     <TextView
+        android:id="@+id/font_textview"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="6dp"
-        android:text="Light"
+        android:text="@string/default_font"
         android:textSize="18sp" />
 
 
@@ -73,7 +75,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="26dp"
-        android:text="Other"
+        android:text="@string/other_title"
         android:textColor="@android:color/holo_blue_dark"
         android:textSize="24sp" />
 
@@ -93,7 +95,7 @@
         android:orientation="horizontal">
 
         <CheckBox
-
+            android:id="@+id/settings_checkbox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="16dp"

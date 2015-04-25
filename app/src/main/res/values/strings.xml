@@ -7,14 +7,41 @@
     <string name="action_full_list">Full List</string>
     <string name="action_random">Random Quote</string>
 
+    <!-- Settings Activity Layout -->
+    <string name="color_title">Color</string>
+    <string name="size_title">Text Size</string>
+    <string name="font_title">Font</string>
+    <string name="other_title">Other</string>
+    <string name="default_color">Red</string>
+    <string name="default_size">12</string>
+    <string name="default_font">Normal</string>
 
-    <!-- Dialog Items -->
+    <!-- Dialog Color Items -->
 
     <string name="pick_color">Pick a color</string>
     <string name="blue">Blue</string>
     <string name="black">Black</string>
     <string name="white">White</string>
     <string name="red">Red</string>
+
+
+    <!-- Dialog Size Items -->
+    <string name="pick_size">Pick a size</string>
+    <string name="size10">10</string>
+    <string name="size11">11</string>
+    <string name="size12">12</string>
+    <string name="size13">13</string>
+    <string name="size14">14</string>
+    <string name="size15">15</string>
+    <string name="size16">16</string>
+
+    <!-- Dialog Font Items -->
+    <string name="pick_font">Pick a font</string>
+    <string name="font_normal">Normal</string>
+    <string name="font_thin">Thin</string>
+    <string name="font_light">Light</string>
+    <string name="font_condensed">Condensed</string>
+
 
 
     <!-- Preference Settings -->
