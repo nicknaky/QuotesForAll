@@ -5,7 +5,7 @@
     android:minResizeHeight="40dp"
     android:minResizeWidth="40dp"
     android:updatePeriodMillis="86400000"
-    android:initialLayout="@layout/quotes_appwidget"
+    android:initialLayout="@layout/quotes_appwidget_thin"
     android:configure="com.mushroomrobot.quotesforall.SettingsActivity"
     android:resizeMode="horizontal|vertical"
     android:widgetCategory="home_screen">

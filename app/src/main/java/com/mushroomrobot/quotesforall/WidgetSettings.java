@@ -46,7 +46,7 @@ public class WidgetSettings extends PreferenceActivity implements Preference.OnP
         int randomIndex = r.nextInt(mQuotesArray.length);
         String randomQuote = mQuotesArray[randomIndex];
 
-        RemoteViews views = new RemoteViews(getPackageName(), R.layout.quotes_appwidget);
+        RemoteViews views = new RemoteViews(getPackageName(), R.layout.quotes_appwidget_thin);
 
         views.setTextViewText(R.id.widget_text, randomQuote);
 
