@@ -5,7 +5,6 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.app.FragmentManager;
-import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -87,20 +86,27 @@ public class SettingsActivity extends Activity {
             Log.v("SELECTED COLOR",selectedColor);
             views.setTextColor(R.id.widget_text,Color.parseColor(selectedColor));
 
-
+/*
             Intent intent = new Intent(SettingsActivity.this,QuotesWidgetProvider.class);
             intent.setAction(appWidgetManager.ACTION_APPWIDGET_UPDATE);
             intent.putExtra(appWidgetManager.EXTRA_APPWIDGET_IDS,mAppWidgetId);
             PendingIntent pendingIntent = PendingIntent.getBroadcast(SettingsActivity.this,0,intent,PendingIntent.FLAG_UPDATE_CURRENT);
             views.setOnClickPendingIntent(R.id.widget_text, pendingIntent);
-
             appWidgetManager.updateAppWidget(mAppWidgetId, views);
+*/
 
+            Intent intent = new Intent(AppWidgetManager.ACTION_APPWIDGET_UPDATE, null, SettingsActivity.this, QuotesWidgetProvider.class);
+            intent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS, new int[] {mAppWidgetId});
+            sendBroadcast(intent);
+            setResult(RESULT_OK, intent);
+            finish();
+
+            /*
             Intent resultValue = new Intent();
             resultValue.putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, mAppWidgetId);
             setResult(RESULT_OK, resultValue);
             finish();
-
+*/
         }
     };
 
