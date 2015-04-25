@@ -16,14 +16,14 @@ import android.widget.Button;
 import android.widget.RemoteViews;
 import android.widget.TextView;
 
-import java.util.Random;
-
 /**
  * Created by Nick on 4/23/2015.
  */
 public class SettingsActivity extends Activity {
 
     int mAppWidgetId;
+
+    public static int setColor;
 
 
 
@@ -69,31 +69,12 @@ public class SettingsActivity extends Activity {
         @Override
         public void onClick(View v) {
 
-            AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(SettingsActivity.this);
-
-
-            Random r = new Random();
-            String[] mQuotesArray = getResources().getStringArray(R.array.Quotes);
-            int randomIndex = r.nextInt(mQuotesArray.length);
-            String randomQuote = mQuotesArray[randomIndex];
-
             RemoteViews views = new RemoteViews(SettingsActivity.this.getPackageName(),R.layout.quotes_appwidget);
-            views.setTextViewText(R.id.widget_text, randomQuote);
 
             TextView textView = (TextView) findViewById(R.id.color_textview);
             String selectedColor = textView.getText().toString();
-
             Log.v("SELECTED COLOR",selectedColor);
-            views.setTextColor(R.id.widget_text,Color.parseColor(selectedColor));
-
-/*
-            Intent intent = new Intent(SettingsActivity.this,QuotesWidgetProvider.class);
-            intent.setAction(appWidgetManager.ACTION_APPWIDGET_UPDATE);
-            intent.putExtra(appWidgetManager.EXTRA_APPWIDGET_IDS,mAppWidgetId);
-            PendingIntent pendingIntent = PendingIntent.getBroadcast(SettingsActivity.this,0,intent,PendingIntent.FLAG_UPDATE_CURRENT);
-            views.setOnClickPendingIntent(R.id.widget_text, pendingIntent);
-            appWidgetManager.updateAppWidget(mAppWidgetId, views);
-*/
+            setColor = Color.parseColor(selectedColor);
 
             Intent intent = new Intent(AppWidgetManager.ACTION_APPWIDGET_UPDATE, null, SettingsActivity.this, QuotesWidgetProvider.class);
             intent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS, new int[] {mAppWidgetId});
@@ -101,12 +82,6 @@ public class SettingsActivity extends Activity {
             setResult(RESULT_OK, intent);
             finish();
 
-            /*
-            Intent resultValue = new Intent();
-            resultValue.putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, mAppWidgetId);
-            setResult(RESULT_OK, resultValue);
-            finish();
-*/
         }
     };
 
@@ -129,10 +104,7 @@ public class SettingsActivity extends Activity {
 
                     dialog.dismiss();
                 }
-
-
             });
-
             return builder.create();
         }
 

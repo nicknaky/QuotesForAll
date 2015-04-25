@@ -31,7 +31,7 @@ public class QuotesWidgetProvider extends AppWidgetProvider {
 
             RemoteViews views = new RemoteViews(context.getPackageName(),R.layout.quotes_appwidget);
             views.setTextViewText(R.id.widget_text, randomQuote);
-
+            views.setTextColor(R.id.widget_text,SettingsActivity.setColor);
 
             Intent intent = new Intent(context,QuotesWidgetProvider.class);
             intent.setAction(appWidgetManager.ACTION_APPWIDGET_UPDATE);
