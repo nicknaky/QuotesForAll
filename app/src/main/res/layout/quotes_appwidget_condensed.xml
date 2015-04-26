@@ -26,15 +26,14 @@
         android:textColor="#AF0404"
         android:textSize="12sp" />
 
-    <Button
+    <ImageButton
         android:id="@+id/widget_button"
         android:layout_width="15dp"
         android:layout_height="15dp"
         android:layout_alignRight="@id/background_widget"
         android:layout_alignTop="@id/background_widget"
-
-        android:background="@drawable/widget_options"
-
-        android:textColor="#AF0404" />
+        android:background="@null"
+        android:src="@drawable/widget_options"
+        />
 
 </RelativeLayout>

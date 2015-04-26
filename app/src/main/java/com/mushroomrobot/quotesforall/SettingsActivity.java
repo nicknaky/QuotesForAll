@@ -35,9 +35,10 @@ public class SettingsActivity extends Activity {
     public static String defaultSize = "12";
     public static String defaultFont = "Normal";
 
-    static TextView colorTextView, sizeTextView, fontTextView;
+    public static boolean checkBoxFlag = true;
 
-    CheckBox settingsCheckBox;
+    static TextView colorTextView, sizeTextView, fontTextView;
+    static CheckBox settingsCheckBox;
 
     static String color = "color";
     static String size = "size";
@@ -68,6 +69,11 @@ public class SettingsActivity extends Activity {
         sizeTextView.setOnClickListener(mClickListener);
         fontTextView = (TextView) findViewById(R.id.font_textview);
         fontTextView.setOnClickListener(mClickListener);
+        settingsCheckBox = (CheckBox) findViewById(R.id.settings_checkbox);
+        settingsCheckBox.setOnClickListener(settingsCheckListener);
+
+        Button button = (Button) findViewById(R.id.apply_button);
+        button.setOnClickListener(applyListener);
 
         try {
 
@@ -83,15 +89,13 @@ public class SettingsActivity extends Activity {
                 fontTextView.setText(extras.getString("EXTRA_FONT"));
                 selectedFont = extras.getString("EXTRA_FONT", "Normal");
             } else fontTextView.setText(defaultFont);
+            if (extras.getBoolean("EXTRA_CHECKBOX")){
+                settingsCheckBox.setChecked(true);
+            }else settingsCheckBox.setChecked(false);
         } catch (java.lang.NullPointerException e){
             System.err.println("NullPointerException: " + e.getMessage());
         }
 
-        settingsCheckBox = (CheckBox) findViewById(R.id.settings_checkbox);
-        //TODO: set checkbox listener here
-
-        Button button = (Button) findViewById(R.id.apply_button);
-        button.setOnClickListener(apply);
     }
 
     private View.OnClickListener mClickListener = new View.OnClickListener() {
@@ -117,7 +121,17 @@ public class SettingsActivity extends Activity {
         }
     };
 
-    private View.OnClickListener apply = new View.OnClickListener(){
+    private View.OnClickListener settingsCheckListener = new View.OnClickListener(){
+        @Override
+        public void onClick(View v) {
+
+            if (settingsCheckBox.isChecked()){
+                checkBoxFlag=true;
+            } else checkBoxFlag=false;
+        }
+    };
+
+    private View.OnClickListener applyListener = new View.OnClickListener(){
         @Override
         public void onClick(View v) {
 
@@ -133,6 +147,7 @@ public class SettingsActivity extends Activity {
             editor.putString("COLOR",selectedColor);
             editor.putString("SIZE",selectedSize);
             editor.putString("FONT",selectedFont);
+            editor.putBoolean("CHECKBOX_FLAG", checkBoxFlag);
             editor.commit();
 
             Intent intent = new Intent(AppWidgetManager.ACTION_APPWIDGET_UPDATE, null, SettingsActivity.this, QuotesWidgetProvider.class);
@@ -140,7 +155,6 @@ public class SettingsActivity extends Activity {
             sendBroadcast(intent);
             setResult(RESULT_OK, intent);
             finish();
-
         }
     };
 
