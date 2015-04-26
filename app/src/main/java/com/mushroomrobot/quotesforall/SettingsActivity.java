@@ -8,12 +8,16 @@ import android.app.FragmentManager;
 import android.appwidget.AppWidgetManager;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TextView;
+
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * Created by Nick on 4/23/2015.
@@ -22,10 +26,14 @@ public class SettingsActivity extends Activity {
 
     int mAppWidgetId;
 
-    //Default settings
+
     public static String selectedColor = "Red";
     public static String selectedSize = "12";
     public static String selectedFont = "Normal";
+
+    public static String defaultColor = "Red";
+    public static String defaultSize = "12";
+    public static String defaultFont = "Normal";
 
     static TextView colorTextView, sizeTextView, fontTextView;
 
@@ -34,15 +42,16 @@ public class SettingsActivity extends Activity {
     static String color = "color";
     static String size = "size";
     static String font = "font";
+
+
+
     static int checkedColorItem = 2;
     static int checkedSizeItem = 2;
     static int checkedFontItem = 0;
 
-
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.settings_activity);
-
 
         Intent intent = getIntent();
         Bundle extras = intent.getExtras();
@@ -55,18 +64,27 @@ public class SettingsActivity extends Activity {
 
         colorTextView = (TextView) findViewById(R.id.color_textview);
         colorTextView.setOnClickListener(mClickListener);
-        if (selectedColor!=null){
-            colorTextView.setText(selectedColor);
-        }
         sizeTextView = (TextView) findViewById(R.id.size_textview);
         sizeTextView.setOnClickListener(mClickListener);
-        if (selectedSize!=null){
-            sizeTextView.setText(selectedSize);
-        }
         fontTextView = (TextView) findViewById(R.id.font_textview);
         fontTextView.setOnClickListener(mClickListener);
-        if (selectedFont!=null){
-            fontTextView.setText(selectedFont);
+
+        try {
+
+            if (extras.getString("EXTRA_COLOR") != null) {
+                colorTextView.setText(extras.getString("EXTRA_COLOR"));
+                selectedColor = extras.getString("EXTRA_COLOR", "Red");
+            } else colorTextView.setText(defaultColor);
+            if (extras.getString("EXTRA_SIZE") != null) {
+                sizeTextView.setText(extras.getString("EXTRA_SIZE"));
+                selectedSize = extras.getString("EXTRA_SIZE", "12");
+            } else sizeTextView.setText(defaultSize);
+            if (extras.getString("EXTRA_FONT") != null) {
+                fontTextView.setText(extras.getString("EXTRA_FONT"));
+                selectedFont = extras.getString("EXTRA_FONT", "Normal");
+            } else fontTextView.setText(defaultFont);
+        } catch (java.lang.NullPointerException e){
+            System.err.println("NullPointerException: " + e.getMessage());
         }
 
         settingsCheckBox = (CheckBox) findViewById(R.id.settings_checkbox);
@@ -110,6 +128,12 @@ public class SettingsActivity extends Activity {
             selectedFont = fontTextView.getText().toString();
             Log.v("SELECTED FONT", selectedFont);
 
+            SharedPreferences settings = getSharedPreferences("SETTINGS",0);
+            SharedPreferences.Editor editor = settings.edit();
+            editor.putString("COLOR",selectedColor);
+            editor.putString("SIZE",selectedSize);
+            editor.putString("FONT",selectedFont);
+            editor.commit();
 
             Intent intent = new Intent(AppWidgetManager.ACTION_APPWIDGET_UPDATE, null, SettingsActivity.this, QuotesWidgetProvider.class);
             intent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS, new int[] {mAppWidgetId});
@@ -125,6 +149,9 @@ public class SettingsActivity extends Activity {
         @Override
         public Dialog onCreateDialog(Bundle savedInstanceState) {
             AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+
+            List<String> colors_list = Arrays.asList(getActivity().getResources().getStringArray(R.array.colors_array));
+            checkedColorItem = colors_list.indexOf(selectedColor);
 
             builder.setTitle(R.string.pick_color).setSingleChoiceItems(R.array.colors_array, checkedColorItem, new DialogInterface.OnClickListener() {
 
@@ -145,6 +172,9 @@ public class SettingsActivity extends Activity {
         public Dialog onCreateDialog(Bundle savedInstanceState) {
             AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 
+            List<String> sizes_list = Arrays.asList(getActivity().getResources().getStringArray(R.array.sizes_array));
+            checkedSizeItem = sizes_list.indexOf(selectedSize);
+
             builder.setTitle(R.string.pick_size).setSingleChoiceItems(R.array.sizes_array, checkedSizeItem, new DialogInterface.OnClickListener() {
 
                 @Override
@@ -164,6 +194,9 @@ public class SettingsActivity extends Activity {
         @Override
         public Dialog onCreateDialog(Bundle savedInstanceState) {
             AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+
+            List<String> fonts_list = Arrays.asList(getActivity().getResources().getStringArray(R.array.fonts_array));
+            checkedFontItem = fonts_list.indexOf(selectedFont);
 
             builder.setTitle(R.string.pick_font).setSingleChoiceItems(R.array.fonts_array, checkedFontItem, new DialogInterface.OnClickListener() {
 
