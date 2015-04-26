@@ -1,7 +1,5 @@
 <resources>
     <string name="app_name">Quotes For All</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
 
     <!-- Menu Items -->
     <string name="action_full_list">Full List</string>
@@ -17,13 +15,11 @@
     <string name="default_font">Normal</string>
 
     <!-- Dialog Color Items -->
-
     <string name="pick_color">Pick a color</string>
     <string name="blue">Blue</string>
     <string name="black">Black</string>
     <string name="white">White</string>
     <string name="red">Red</string>
-
 
     <!-- Dialog Size Items -->
     <string name="pick_size">Pick a size</string>
@@ -43,58 +39,6 @@
     <string name="font_condensed">Condensed</string>
 
 
-
-    <!-- Preference Settings -->
-
-    <string name="button_apply">APPLY</string>
-
-    <string name="widget_settings_label">Widget Settings</string>
-
-    <string name="pref_font_color_label">Font Color</string>
-    <string name="pref_font_color_value_default">#AF0404</string>
-    <string name="pref_font_color_value_key">key</string>
-    <string name="pref_font_color_label_black">Black</string>
-    <string name="pref_font_color_label_blue">Blue</string>
-    <string name="pref_font_color_label_green">Green</string>
-    <string name="pref_font_color_label_red">Red</string>
-    <string name="pref_font_color_label_white">White</string>
-    <string name="pref_font_color_value_red">#AF0404</string>
-    <string name="pref_font_color_value_black">#000000</string>
-    <string name="pref_font_color_value_white">#ffffff</string>
-    <string name="pref_font_color_value_blue">#0900ff</string>
-    <string name="pref_font_color_value_green">#2fff00</string>
-
-
-    <string name="pref_font_size_label">Font Size</string>
-    <string name="pref_font_size_value_default">12sp</string>
-    <string name="pref_font_size_value_key">key</string>
-    <string name="pref_font_size_label_12">12</string>
-    <string name="pref_font_size_label_13">13</string>
-    <string name="pref_font_size_label_14">14</string>
-    <string name="pref_font_size_label_15">15</string>
-    <string name="pref_font_size_label_16">16</string>
-    <string name="pref_font_size_value_12">12</string>
-    <string name="pref_font_size_value_13">13</string>
-    <string name="pref_font_size_value_14">14</string>
-    <string name="pref_font_size_value_15">15</string>
-    <string name="pref_font_size_value_16">16</string>
-
-
-    <string name="pref_font_type_label">Font Type</string>
-    <string name="pref_font_type_value_default">sans-serif-thin</string>
-    <string name="pref_font_type_value_key">key</string>
-    <string name="pref_font_type_label_thin">Thin</string>
-    <string name="pref_font_type_label_light">Light</string>
-    <string name="pref_font_type_label_regular">Regular</string>
-    <string name="pref_font_type_label_medium">Medium</string>
-    <string name="pref_font_type_label_bold">Bold</string>
-    <string name="pref_font_type_value_thin">sans-serif-thin</string>
-    <string name="pref_font_type_value_light">sans-serif-light</string>
-    <string name="pref_font_type_value_regular">sans-serif</string>
-    <string name="pref_font_type_value_medium">sans-serif-medium</string>
-    <string name="pref_font_type_value_bold">sans-serif-bold</string>
-
-
     <!-- Quotes -->
     <string name="q1">"Don\'t ruin a good today by thinking about a bad yesterday."</string>
     <string name="q2">"An entire sea of water can\'t sink a ship unless it gets inside the ship. Similarly the negativity of the world can\'t put you down unless you allow it to get inside you."</string>
@@ -106,7 +50,7 @@
     <string name="q8">"Discipline is just choosing between what you want now and what you want most."</string>
     <string name="q9">"It\'s going to be hard, but hard is not impossible."</string>
     <string name="q10">"A bird sitting on a tree is never afraid of the branch breaking because her trust is not within the branch, but within her wings. Believe in yourself."</string>
-    <string name="q11">"I don\'t have dreams. I have goals. - Harvey Specter"</string>
+    <string name="q11">"It is impossible to live without failing at something, unless you live so cautiously that you might as well not have lived at all - in which case, you fail by default. - J.K. Rowling"</string>
     <string name="q12">"Work until your idols become your rivals."</string>
     <string name="q13">"Great men are not born great, they grow great."</string>
     <string name="q14">"When life puts you in tough situations, don\'t say \'why me.\' Just say \'try me.\'"</string>

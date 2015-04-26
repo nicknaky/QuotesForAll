@@ -22,7 +22,7 @@ import java.util.List;
 /**
  * Created by Nick on 4/23/2015.
  */
-public class SettingsActivity extends Activity {
+public class WidgetConfigure extends Activity {
 
     int mAppWidgetId;
 
@@ -150,7 +150,7 @@ public class SettingsActivity extends Activity {
             editor.putBoolean("CHECKBOX_FLAG", checkBoxFlag);
             editor.commit();
 
-            Intent intent = new Intent(AppWidgetManager.ACTION_APPWIDGET_UPDATE, null, SettingsActivity.this, QuotesWidgetProvider.class);
+            Intent intent = new Intent(AppWidgetManager.ACTION_APPWIDGET_UPDATE, null, WidgetConfigure.this, WidgetProvider.class);
             intent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS, new int[] {mAppWidgetId});
             sendBroadcast(intent);
             setResult(RESULT_OK, intent);

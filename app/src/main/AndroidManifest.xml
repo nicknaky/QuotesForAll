@@ -18,7 +18,7 @@
             </intent-filter>
         </activity>
 
-        <receiver android:name=".QuotesWidgetProvider">
+        <receiver android:name=".WidgetProvider">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
             </intent-filter>
@@ -26,7 +26,7 @@
                 android:resource="@xml/quotes_appwidget_info"/>
         </receiver>
 
-        <activity android:name=".SettingsActivity">
+        <activity android:name=".WidgetConfigure">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
             </intent-filter>
